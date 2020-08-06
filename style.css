@@ -113,8 +113,8 @@ body {
     /* Safari */
     animation: spin 2s linear infinite;
     margin: 0 auto;
-    margin-top: 50vh;
-    transform: translateY(-50%);
+    /* margin-top: 50vh;
+    transform: translateY(-50%); */
 }
 
 @keyframes spin {
