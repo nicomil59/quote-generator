@@ -2,7 +2,7 @@ const body = document.querySelector('body');
 const api = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
 const loader = `<div class="loader"></div>`;
 
-const getQuote = data => {
+const formatQuote = data => {
     const { quoteText, quoteAuthor } = data.quote;
     console.log(quoteText, quoteAuthor);
     const html = `<div class="quote__container">
@@ -23,7 +23,7 @@ const showQuote = () => {
     fetch(api)
         .then(response => response.json())
         .then(data => {
-            body.innerHTML = getQuote(data);
+            body.innerHTML = formatQuote(data);
             const newQuoteButton = document.querySelector('.quote__button--new-quote');
             const tweetButton = document.querySelector('.quote__button--twitter');
             newQuoteButton.addEventListener('click', showQuote);
