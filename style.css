@@ -26,6 +26,7 @@ body {
 
     box-shadow: 0 3.5px #999;
 }
+
 .quote__button:active {
     background-color: #222;
     box-shadow: 0 2px #666;
@@ -60,12 +61,22 @@ body {
 }
 
 .quote__text {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
 .quote__author {
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .quote__text {
+        font-size: 2rem;
+    }
+
+    .quote__author {
+        font-size: 1.5rem;
+    }
 }
 
 /* BUTTONS */
@@ -82,6 +93,7 @@ body {
 .quote__button--new-quote {
     cursor: pointer;
 }
+
 .quote__button--new-quote:hover {
     color: gold;
 }
@@ -103,6 +115,11 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
